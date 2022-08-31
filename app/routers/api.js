@@ -34,7 +34,7 @@ router.post('/connect', async (req, res) => {
     }
 
     try {
-        const client = new Client({ authStrategy: new LocalAuth({ clientId: id }) });
+        const client = new Client({ authStrategy: new LocalAuth({ clientId: id, dataPath: dir }) });
         client.initialize();
         client.on('ready', () => {
             console.log("READY")
@@ -133,7 +133,7 @@ router.post('/sendMessages', async (req, res) => {
         return res.status(400).send("NO EXISTE CONFIGURACION")
     }
 
-    const client = new Client({ puppeteer: { headless: false, args: ['--disable-dev-shm-usage'] }, authStrategy: new LocalAuth({ clientId: id }) });
+    const client = new Client({ puppeteer: { headless: false, args: ['--disable-dev-shm-usage'] }, authStrategy: new LocalAuth({ clientId: id, dataPath: dir }) });
     client.initialize();
     client.on('ready', async () => {
         console.log('READY');
@@ -223,7 +223,7 @@ router.post('/getqr', async (req, res) => {
         return res.status(400).send("NO EXISTE USUARIO")
     }
 
-    const client = new Client({ authStrategy: new LocalAuth({ clientId: id }) });
+    const client = new Client({ authStrategy: new LocalAuth({ clientId: id, dataPath: dir }) });
     client.initialize();
     client.once('qr', (qr) => {
         res.send({ success: "Ok", qr: qr });
