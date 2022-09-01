@@ -40,7 +40,7 @@ router.post('/connect', async (req, res) => {
             console.log("READY")
             client.destroy();
             sleepFor(3000)
-            return res.status(200).send({ success: "OK" });
+            return res.status(200).send({ success: "Ok" });;
         });
         client.on('auth_failure', () => {
             console.log("FAILURE")
@@ -56,7 +56,7 @@ router.post('/connect', async (req, res) => {
         })
         client.once('qr', (qr) => {
             console.log("QR")
-            res.send({ success: "Ok", qr: qr });
+            return res.send({ success: "Ok", qr: qr });
         });
     }
     catch (e) {

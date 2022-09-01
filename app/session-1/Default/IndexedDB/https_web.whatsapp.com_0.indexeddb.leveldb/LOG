@@ -1,0 +1,10 @@
+2022/08/31-22:34:15.141 6e50 Reusing MANIFEST C:\Proyectos\send-whats-server\app\session-1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/31-22:34:15.142 6e50 Recovering log #4
+2022/08/31-22:34:15.420 6e50 Reusing old log C:\Proyectos\send-whats-server\app\session-1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2022/08/31-22:34:27.835 7394 Level-0 table #8: started
+2022/08/31-22:34:27.864 7394 Level-0 table #8: 1165761 bytes OK
+2022/08/31-22:34:27.868 7394 Delete type=0 #4
+2022/08/31-22:34:27.873 7394 Compacting 1@1 + 1@2 files
+2022/08/31-22:34:27.965 7394 Generated table #9@1: 21488 keys, 1192730 bytes
+2022/08/31-22:34:27.965 7394 Compacted 1@1 + 1@2 files => 1192730 bytes
+2022/08/31-22:34:27.970 7394 compacted to: files[ 0 0 1 0 0 0 0 ]
